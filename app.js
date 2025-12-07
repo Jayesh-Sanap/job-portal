@@ -156,3 +156,4 @@ filterCategory.addEventListener("change", renderJobs);
   loadJobs();
   renderJobs();
 })();
+console.log("git test");
