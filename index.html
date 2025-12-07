@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Job Portal - Beginner Final</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrap">
+    <header class="header">
+      <h1>Job Portal</h1>
+      <p class="note">Add / Edit / Delete jobs — saved locally</p>
+    </header>
+
+    <div class="controls">
+      <input id="searchInput" placeholder="Search by title or company..." />
+      <select id="filterCategory">
+        <option value="all">All categories</option>
+        <option>IT</option>
+        <option>Marketing</option>
+        <option>Finance</option>
+        <option>HR</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="layout">
+      <!-- LEFT: form -->
+      <aside class="panel">
+        <h3>Post / Edit Job</h3>
+
+        <label>Title</label>
+        <input id="jobTitle" placeholder="Frontend Developer" />
+
+        <label>Company</label>
+        <input id="jobCompany" placeholder="Company name" />
+
+        <label>Category</label>
+        <select id="jobCategory">
+          <option>IT</option><option>Marketing</option><option>Finance</option><option>HR</option><option>Other</option>
+        </select>
+
+        <label>Description (optional)</label>
+        <textarea id="jobDesc" rows="3" placeholder="Short summary..."></textarea>
+
+        <div style="margin-top:12px; display:flex; gap:8px;">
+          <button id="saveBtn" class="btn btn-primary">Add Job</button>
+          <button id="clearBtn" class="btn btn-ghost">Reset</button>
+        </div>
+
+        <p class="note">Jobs are stored in your browser (localStorage).</p>
+      </aside>
+
+      <!-- RIGHT: feed -->
+      <section class="feed">
+        <div class="feed-header">
+          <h3>Available Jobs</h3>
+          <div class="stats" id="stats">0 jobs</div>
+        </div>
+
+        <ul id="jobList" class="jobs"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
